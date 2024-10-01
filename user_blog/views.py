@@ -12,7 +12,7 @@ def get_data_from_other_blog(api_url):
         return None
 
 def blog_data_view(request):
-    api_url = 'http://localhost:8000/api/blogposts/'
+    api_url = 'https://krishnaastute.pythonanywhere.com/api/blogposts/'
     blog_data = get_data_from_other_blog(api_url)
     
     return render(request, 'blog_template.html', {'data': blog_data})
