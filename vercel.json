@@ -1,15 +1,9 @@
 {
   "functions": {
-    "api/**/*.py": {
+    "userend/asgi.py": {
       "runtime": "python3.12"
     }
   },
-  "builds": [
-    {
-      "src": "userend/asgi.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
