@@ -22,7 +22,7 @@ from django.http import HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.blog_data_view,name="blogs"),
+    path('blog/<str:title>',views.blog_data_view,name="blogs"),
     path('favicon.ico', lambda request: HttpResponse(status=204)),
      path('favicon.png', lambda request: HttpResponse(status=204))
 
