@@ -24,4 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/<str:title>/',views.blog_data_view,name="blogs"),
     path('favicon.ico', lambda request: HttpResponse(status=204)),
+     path('favicon.png', lambda request: HttpResponse(status=204))
+
 ]
