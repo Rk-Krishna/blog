@@ -26,8 +26,10 @@ SECRET_KEY = 'django-insecure-6iwnd3c&@d74aa&jv1!(_!%^p@ful#9&91*h*e9b%l&ycqbxc!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['astutesai.com','www.astutesai.com']
-
+ALLOWED_HOSTS = ['.vercel.app','astutesai.com','www.astutesai.com']
+VERCEL_URL = os.getenv('VERCEL_URL')
+if VERCEL_URL:
+    ALLOWED_HOSTS.append(VERCEL_URL)
 
 # Application definition
 
@@ -40,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user_blog'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,6 +73,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'userend.wsgi.application'
+
+ASGI_APPLICATION = 'userend.asgi.application'
 
 
 # Database
