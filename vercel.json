@@ -12,5 +12,14 @@
         "dest": "userend/asgi.py"
       }
     ]
+    "builds": [
+    {
+      "src": "your_project_name/asgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "install": "pip install -r requirements.txt"
+      }
+    }
+  ]
   }
   
