@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6iwnd3c&@d74aa&jv1!(_!%^p@ful#9&91*h*e9b%l&ycqbxc!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['astutesai.com','www.astutesai.com']
+ALLOWED_HOSTS = ['blog-k5ai7gzwu-aditya-purwars-projects.vercel.app','astutesai.com','www.astutesai.com']
 
 
 # Application definition
