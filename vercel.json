@@ -1,25 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "userend/asgi.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "userend/asgi.py"
-      }
-    ]
-    "builds": [
+  "version": 2,
+  "builds": [
     {
-      "src": "your_project_name/asgi.py",
+      "src": "userend/asgi.py",
       "use": "@vercel/python",
       "config": {
         "install": "pip install -r requirements.txt"
       }
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "userend/asgi.py"
+    }
   ]
-  }
-  
+}
